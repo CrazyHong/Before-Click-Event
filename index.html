@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ch">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="td" class="test">
+        <div onclick="myClick()"> 点我 </div>
+    </div>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+    var _id=$(".test").attr("id");
+    document.getElementById(_id).addEventListener('click', myFilter, true);
+    function myFilter(em) {
+        var target = em.target;       
+        if (target.nodeName.toLowerCase() === 'div') {
+            alert("run click");
+        }
+    }
+
+    function myClick() {
+        alert("click");
+    }
+</script>
+</body>
+
+</html>
